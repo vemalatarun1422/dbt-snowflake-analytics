@@ -1,0 +1,6 @@
+id,customer_id,order_date,status
+101,1,2025-02-01,completed
+102,1,2025-02-15,completed
+103,2,2025-02-16,returned
+104,3,2025-03-01,shipped
+105,3,2025-03-02,placed
