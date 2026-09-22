@@ -1,0 +1,4 @@
+-- Fails if any order has a negative total
+select order_id, order_amount
+from {{ ref('fct_orders') }}
+where order_amount < 0
