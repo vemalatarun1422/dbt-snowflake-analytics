@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: One row per order with payment totals.
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+  - name: dim_customers
+    description: One row per customer with lifetime order metrics.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
